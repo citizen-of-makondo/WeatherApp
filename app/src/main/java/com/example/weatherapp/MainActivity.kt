@@ -2,6 +2,7 @@ package com.example.weatherapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -12,9 +13,14 @@ class MainActivity : AppCompatActivity() {
 
         val textViewString = findViewById<TextView>(R.id.textViewString)
         val textViewInt = findViewById<TextView>(R.id.textViewInt)
+        val button = findViewById<Button>(R.id.button)
 
-        val data = TestClass()
-        textViewString.setText(data.stringField)
-        textViewInt.setText(data.intField.toString())
+        button.setOnClickListener() {
+            val data = TestClass()
+            textViewString.setText(data.stringField)
+            textViewInt.setText(data.intField.toString())
+        }
+
+
     }
 }
