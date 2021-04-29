@@ -15,6 +15,6 @@ class MainActivity : AppCompatActivity() {
 
         val data = TestClass()
         textViewString.setText(data.stringField)
-        textViewInt.setText(data.intField)
+        textViewInt.setText(data.intField.toString())
     }
 }
